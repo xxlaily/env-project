@@ -1,0 +1,19 @@
+server:
+  port: 7900
+spring:
+  cloud:
+    config:
+      server:
+        git:
+          uri: https://gitee.com/xxlong_pro/config-demo.git
+          username: xinglong.xu@ytbdqn.cn
+          password: 123456@123
+          search-paths: config-repo
+  application:
+    name: dm-config-server
+eureka:
+  client:
+    service-url:
+      defaultZone: http://root:123456@192.168.92.131:7776/eureka/
+  instance:
+    prefer-ip-address: true
